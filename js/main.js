@@ -92,8 +92,7 @@ $(document).ready(function(){
 // ***********************************
 // Backstretch - Slider on Background
 //
-//  Note :  make sure  use this  http://bootstrapwizard.info/Theme/Fullscreen/images/bg4.jpg"  when on server  but you can simply use  "images/bg1.jpg"  if you are on localhost
-//
+//  Note : remember to use sever address when on server.
 // ***********************************								  
 			 
 $("body.bg-slider").backstretch([
