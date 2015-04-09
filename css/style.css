@@ -146,14 +146,14 @@ ul.unstyled {
   -o-transition-delay: .3s;
 }
 .showdelay4 {
-  animation-delay: .5s;
-  -moz-animation-delay: .5s;
-  -webkit-animation-delay: .5s;
-  -o-animation-delay: .5s;
-  transition-delay: .5s;
-  -webkit-transition-delay: .5s;
-  -moz-transition-delay: .5s;
-  -o-transition-delay: .5s;
+  animation-delay: .4s;
+  -moz-animation-delay: .4;
+  -webkit-animation-delay: .4s;
+  -o-animation-delay: .4s;
+  transition-delay: .4s;
+  -webkit-transition-delay: .4s;
+  -moz-transition-delay: .4s;
+  -o-transition-delay: .4s;
 }
 .showdelay5 {
   animation-delay: .5s;
@@ -955,4 +955,8 @@ body.nopadd {
   #main-menu .navbar-header {
     padding: 0;
   }
+}
+.slider-icon {
+  color: #ffffff; 
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
