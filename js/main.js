@@ -99,7 +99,6 @@ $("body.bg-slider").backstretch([
    "images/bg7.jpg",
    "images/bg8.jpg",
    "images/bg9.jpg",
-   "images/bg1.jpg",
    "images/bg2.jpg",
    "images/bg3.jpg",
    "images/bg4.jpg",
