@@ -1,5 +1,8 @@
 <?php
+echo "im fine";
+
 // check if fields passed are empty
+ 
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
    empty($_POST['message'])	||
@@ -9,16 +12,42 @@ if(empty($_POST['name'])  		||
 	echo "No arguments Provided!";
 	return false;
    }
-	
+
+
 $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 $subject = $_POST['subject'];
 
+
+//test code
+/*
+echo "start\n\n";
+
+$name = 'phptestvar';
+$email = 'phptestvar';
+$message = 'phptestvar';
+$subject = 'phptestvar';
+
+$status = "false";
+
+*/
+
 //db lines
 
 //connect to CN db
-$dsn = "mysql:host=localhost;dbname=a0208102102";
+$dsn = "mysql:dbname=a0208102102;host=localhost;";
+
+$con = mysql_connect(localhost,'a0208102102','75623203');
+
+echo "$con"; 
+if ($con == false) {
+   echo "connection failed";
+   return false;
+}  else { 
+   echo "so sad";
+
+
 $db = new PDO($dsn,'a0208102102','75623203');
 
 /*query code:
@@ -28,11 +57,13 @@ NULL ,  'test2',  'test2',  'teste2',  'msgmsg', CURDATE( )
 );
 */
 
-$db->query("SELECT * FROM 'INSERT INTO  `contacts` (  `uid` ,  `name` ,  `email` ,  `subject` ,  `message` ,  `date` ) 
-	VALUES (
-		NULL ,  '$name',  '$email',  '$subject',  '$message', CURDATE( ));");
+$sql = "INSERT INTO `contacts` (`uid`, `name`, `email`, `subject`, `message`, `date`) VALUES (NULL, '$name', '$email', '$subject', '$message', CURDATE());";
+
+$db->query($sql);
 
 return true;
+
+}
 
 
 /*
